@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Zitierstil für Rechtsquellen.
+
+  Rechtsquellen werden wörtlich angeführt: kein Autor, kein Jahr, keine
+  Anführungszeichen, keine Kursivierung. Der Stil gibt daher nur den Titel aus
+  und hängt einen Punkt an; im Fließtext erscheint die Kurzform (`shorttitle`).
+  Sortiert wird alphabetisch nach Titel.
+-->
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0"
+       default-locale="de-DE">
+  <info>
+    <title>Rechtsquellen</title>
+    <id>urn:uuid:8c0f2a3e-5d41-4c88-9a2b-rechtsquellen</id>
+    <updated>2026-09-20T00:00:00+00:00</updated>
+  </info>
+
+  <citation>
+    <layout prefix="(" suffix=")">
+      <text variable="title-short"/>
+    </layout>
+  </citation>
+
+  <!-- hanging-indent muss hier stehen: Typst nimmt den Einzug aus dem Stil,
+       `set par(hanging-indent: ...)` im Template greift für Bibliografien nicht. -->
+  <bibliography hanging-indent="true">
+    <sort>
+      <key variable="title"/>
+    </sort>
+    <layout suffix=".">
+      <text variable="title"/>
+    </layout>
+  </bibliography>
+</style>

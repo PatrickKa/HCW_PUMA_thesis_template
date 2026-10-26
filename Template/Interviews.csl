@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Zitierstil für Interviews und Beobachtungsprotokolle.
+
+  Die Einträge werden wörtlich angeführt: Der Stil gibt nur den Titel aus und
+  hängt einen Punkt an; im Fließtext erscheint die Kurzform (`shorttitle`).
+  Anders als bei den Rechtsquellen wird nicht sortiert, die Einträge erscheinen
+  in der Reihenfolge von Interviews.bib.
+-->
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0"
+       default-locale="de-DE">
+  <info>
+    <title>Interviews</title>
+    <id>urn:uuid:3e7b9d10-6a2c-4f51-b8e4-interviews</id>
+    <updated>2026-10-24T00:00:00+00:00</updated>
+  </info>
+
+  <citation>
+    <layout prefix="(" suffix=")">
+      <text variable="title-short"/>
+    </layout>
+  </citation>
+
+  <!-- hanging-indent muss hier stehen: Typst nimmt den Einzug aus dem Stil,
+       `set par(hanging-indent: ...)` im Template greift für Bibliografien nicht. -->
+  <bibliography hanging-indent="true">
+    <layout suffix=".">
+      <text variable="title"/>
+    </layout>
+  </bibliography>
+</style>
