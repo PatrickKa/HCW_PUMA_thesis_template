@@ -247,7 +247,7 @@
 }
 
 
-#let list-of-abbreviations() = {
+#let list-of-abbreviations(show-all: false) = {
   // Glossy sets the title as a `heading(level: 1, title)` which would be
   // numbered in the main matter
   set heading(numbering: none)
@@ -264,7 +264,7 @@
     sort: true,
     ignore-case: false, // When sorting
     // Lists all entries, also the ones not used in the text
-    show-all: true,
+    show-all: show-all,
   )
 }
 

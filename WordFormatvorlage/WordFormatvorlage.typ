@@ -87,7 +87,7 @@ Formatvorlagen für die Überschriften richtig verwendet wurden, werden alle
 Ebenen automatisch im Verzeichnis aktualisiert.
 
 
-#list-of-abbreviations()
+#list-of-abbreviations(show-all: true)
 
 #v(22.5pt) // Word separates the note below by an empty line
 
