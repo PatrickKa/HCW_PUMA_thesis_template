@@ -19,11 +19,9 @@
 #let template(body) = {
   set page(
     paper: "a4",
-    margin: (top: 26.1mm, bottom: 21mm, left: 30mm, right: 26mm),
+    margin: (top: 26.1mm, bottom: 28mm, left: 30mm, right: 26mm),
     footer: context align(right, text(size: 10pt, counter(page).display())),
-    // TODO: Do we really need to follow this stupid Word behavior of putting
-    // the footer inside the bottom margin?
-    footer-descent: -3.1mm,
+    footer-descent: 4mm,
   )
   set text(
     font: "Arial",
@@ -212,6 +210,9 @@
 
 
 // Everything after the last chapter
+//
+// TODO: Think about removing the chapter headings from the header in the
+// backmatter. The Formatvorlage is inconsistent here.
 #let back-matter(body) = {
   set heading(numbering: none)
   body
